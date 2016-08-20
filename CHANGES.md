@@ -13,5 +13,4 @@ Naman Bhalla's optimizations
 
 arter97's optimizations
 * [art: force optimizing compiler and optimize everything](https://github.com/arter97/android_art/commit/5d8626cce4d9f49ebf4f1a12fe777ae60b0a6027)
-* [Create 0 compression ratio jar files](https://github.com/arter97/android_build/commit/9e0c0f4a64d359b461b2f881bc46afbab60a4d09)
 * [(SystemUI: implement burn-in protection for noti items)](https://github.com/arter97/android_frameworks_base/commit/ff92904c9704361fc6dcce2c76de6194d90b2b5c)
