@@ -9,3 +9,5 @@
 
 * [[1/2] Settings: Add support for OP_ALARM_WAKEUP](https://github.com/Naman-Bhalla/rr_packages_apps_Settings/commit/ba26eb52856437b34ce58236da28a32f5930f0c9)
 * [[2/2] AppOps: Add alarm wakeup op](https://github.com/Naman-Bhalla/rr_frameworks_base/commit/c96c0d80f4ec40c6fc9c317df2d3214860374279)
+
+* [SystemUI: implement burn-in protection for noti items](https://github.com/arter97/android_frameworks_base/commit/ff92904c9704361fc6dcce2c76de6194d90b2b5c)
