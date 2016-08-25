@@ -29,9 +29,9 @@ on enable-low-power
     write /sys/devices/system/cpu/cpu0/cpufreq/interactive/timer_rate 20000
     write /sys/devices/system/cpu/cpu0/cpufreq/interactive/hispeed_freq 960000
     write /sys/devices/system/cpu/cpu0/cpufreq/interactive/io_is_busy 1
-    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/target_loads 80
-    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/min_sample_time 19000
-    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/max_freq_hysteresis 79000
+    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/target_loads "89 1100000:35 1200000:49 1300000:71 1400000:95"
+    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/min_sample_time 40000
+    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/max_freq_hysteresis 100000
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 307200
     write /sys/devices/system/cpu/cpu0/cpufreq/interactive/ignore_hispeed_on_notif 1
     write /sys/devices/system/cpu/cpu0/cpufreq/interactive/enable_prediction 1
@@ -48,9 +48,9 @@ on enable-low-power
     write /sys/devices/system/cpu/cpu2/cpufreq/interactive/timer_rate 20000
     write /sys/devices/system/cpu/cpu2/cpufreq/interactive/hispeed_freq 1248000
     write /sys/devices/system/cpu/cpu2/cpufreq/interactive/io_is_busy 1
-    write /sys/devices/system/cpu/cpu2/cpufreq/interactive/target_loads "85 1500000:90 1800000:70 2100000:95"
-    write /sys/devices/system/cpu/cpu2/cpufreq/interactive/min_sample_time 19000
-    write /sys/devices/system/cpu/cpu2/cpufreq/interactive/max_freq_hysteresis 79000
+    write /sys/devices/system/cpu/cpu2/cpufreq/interactive/target_loads "89 1300000:35 1500000:49 1600000:71 1700000:95"
+    write /sys/devices/system/cpu/cpu2/cpufreq/interactive/min_sample_time 40000
+    write /sys/devices/system/cpu/cpu2/cpufreq/interactive/max_freq_hysteresis 100000
     write /sys/devices/system/cpu/cpu2/cpufreq/scaling_min_freq 307200
     write /sys/devices/system/cpu/cpu2/cpufreq/interactive/ignore_hispeed_on_notif 1
     write /sys/devices/system/cpu/cpu2/cpufreq/interactive/enable_prediction 1
@@ -109,6 +109,28 @@ on enable-low-power
 
     # Starting io prefetcher service
     start iop
+
+    # Set thermal restrictions
+    write /sys/kernel/msm_thermal/enabled 0
+    write /sys/kernel/msm_thermal/zone0 "1324800 1632000 40 38"
+    write /sys/kernel/msm_thermal/zone1 "1324800 1555200 41 40"
+    write /sys/kernel/msm_thermal/zone2 "1228800 1478400 42 41"
+    write /sys/kernel/msm_thermal/zone3 "1228800 1401600 43 42"
+    write /sys/kernel/msm_thermal/zone4 "1190400 1324800 44 43"
+    write /sys/kernel/msm_thermal/zone5 "1190400 1248000 46 44"
+    write /sys/kernel/msm_thermal/zone6 "1113600 1190400 48 46"
+    write /sys/kernel/msm_thermal/zone7 "1036800 940800 53 50"
+    write /sys/kernel/msm_thermal/zone8 "729600 729600 65 60"
+    write /sys/kernel/msm_thermal/sampling_ms 8000
+    write /sys/kernel/msm_thermal/enabled 1
+
+    write /sys/module/cluster_plug/parameters/load_threshold_down 18
+    write /sys/module/cluster_plug/parameters/load_threshold_up 60
+    write /sys/module/cluster_plug/parameters/vote_threshold_down 5
+    write /sys/module/cluster_plug/parameters/vote_threshold_up 2
+    write /sys/module/cluster_plug/parameters/active 1
+
+    setprop sys.io.scheduler deadline
 
 on charger
     write /sys/devices/system/cpu/cpu1/online 0
