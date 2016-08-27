@@ -138,3 +138,6 @@ wifi.interface=wlan0
 
 # VM
 dalvik.vm.dex2oat-swap=false
+
+# Device Name
+ro.cm.device=oneplus3
