@@ -13,4 +13,5 @@ Naman Bhalla's optimizations
 
 arter97's optimizations
 * [art: force optimizing compiler and optimize everything](https://github.com/arter97/android_art/commit/5d8626cce4d9f49ebf4f1a12fe777ae60b0a6027)
-* [(SystemUI: implement burn-in protection for noti items)](https://github.com/arter97/android_frameworks_base/commit/ff92904c9704361fc6dcce2c76de6194d90b2b5c)
+* [core: Allow board to specify additional flags](https://github.com/arter97/android_build/commit/8b39322a6a1d4fec41119ed8937910cc3d731e7a)
+* [core: arm: bypass some "unused" warnings/errors](https://github.com/arter97/android_build/commit/8556fae50ae95d618fc43e1196f7eebfc842f2cb)
