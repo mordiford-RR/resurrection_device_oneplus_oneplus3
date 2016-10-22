@@ -415,4 +415,9 @@
 
     <!-- Enable blur support -->
     <bool name="config_ui_blur_enabled">true</bool>
-</resources>
+
+    <!-- RR Hardwarekey Pref -->
+    <bool name="config_hwKeysPref">true</bool>
+
+    <!-- Button illumination -->		
+    <bool name="config_deviceHasVariableButtonBrightness">true</bool></resources>
